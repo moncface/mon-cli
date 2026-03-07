@@ -1,0 +1,24 @@
+{
+  "name": "@moncface/mon-cli",
+  "version": "0.1.0",
+  "description": "Developer tools in your terminal. CLI companion for Mon [tab] Chrome extension.",
+  "type": "module",
+  "bin": {
+    "mon": "./bin/mon-tab.js",
+    "mon-tab": "./bin/mon-tab.js"
+  },
+  "dependencies": {
+    "mon-tab": "^0.1.0"
+  },
+  "keywords": ["cli", "developer-tools", "utility", "uuid", "base64", "hash", "calculator"],
+  "author": "moncface",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moncface/mon-cli"
+  },
+  "homepage": "https://github.com/moncface/mon-cli",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
