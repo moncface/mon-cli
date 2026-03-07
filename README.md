@@ -7,7 +7,13 @@
 ## Install
 
 ```bash
-npm install -g @moncface/mon-cli
+npm install -g mon-tab
+```
+
+## Update
+
+```bash
+npm update -g mon-tab
 ```
 
 ## Usage
