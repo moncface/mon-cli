@@ -42,6 +42,18 @@ mon lc    # generate + copy to clipboard
 
 Generates a minimal project state file (`.lndf/current.lndf`) designed for LLM context injection. See [LNDF](https://github.com/moncface/lndf) for the philosophy.
 
+## Cross-Project Source Collection (CLI only)
+
+```bash
+mon lp create myproj       # create a project in ~/.mon/projects/
+mon lp add myproj file.js  # add a source to the project
+mon lp view myproj         # list sources with preview
+mon lp dump myproj         # concatenate all sources for LLM context
+mon lp list                # list all projects
+```
+
+Aggregate source files across projects for LLM context injection.
+
 ## Architecture
 
 `mon-cli` imports shared commands from the [`mon-tab`](https://www.npmjs.com/package/mon-tab) npm package. Chrome-only commands (like `rem`) are not available in CLI.
