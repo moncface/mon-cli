@@ -9,9 +9,13 @@ Mon CLI is the CLI version of mon-tab. npm package name: `mon-tab`
 ### Project-local (single project distillation)
 
 ```
-mon ld  — Distill project state from git + package.json (no LLM required)
-mon lv  — Display current distillation
-mon lc  — Distill + copy to clipboard
+mon ld              — Distill project state from git + package.json (no LLM required)
+mon lv              — Display current distillation
+mon lv --reindex    — Build SQLite index from hako/ frontmatter
+mon lv --tag <tag>  — Search hako by tag
+mon lv --after <date> — Search hako by date
+mon lv --stats      — Show hako index statistics
+mon lc              — Distill + copy to clipboard
 ```
 
 File structure:

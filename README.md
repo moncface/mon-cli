@@ -35,9 +35,13 @@ Type `mon ?` to see all available commands.
 ## .lndf Distillation (CLI only)
 
 ```bash
-mon ld    # generate project snapshot from git + package.json
-mon lv    # view current .lndf
-mon lc    # generate + copy to clipboard
+mon ld              # generate project snapshot from git + package.json
+mon lv              # view current .lndf
+mon lv --reindex    # build SQLite index from hako/ frontmatter
+mon lv --tag sql    # search hako by tag
+mon lv --after 2026-03  # search hako by date
+mon lv --stats      # show hako index statistics
+mon lc              # generate + copy to clipboard
 ```
 
 Generates a minimal project state file (`.lndf/current.lndf`) designed for LLM context injection. See [LNDF](https://github.com/moncface/lndf) for the philosophy.
