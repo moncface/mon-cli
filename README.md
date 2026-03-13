@@ -25,7 +25,7 @@ mon b64 hello         # aGVsbG8=
 mon sha hello         # 2cf24dba5fb0a30e...
 mon calc 1920/1080    # 1920/1080 = 1.777777778
 mon calc 2 inch to cm # 5.08 cm (math.js)
-mon --version         # 0.4.0
+mon --version         # 0.5.0
 mon ?                 # list all commands
 echo "b64 hello" | mon  # aGVsbG8= (stdin pipe)
 ```
