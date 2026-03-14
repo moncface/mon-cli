@@ -64,4 +64,4 @@ Aggregate source files across projects for LLM context injection.
 
 ## License
 
-MIT
+Apache-2.0

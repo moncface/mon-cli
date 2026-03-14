@@ -12,7 +12,7 @@
   },
   "keywords": ["cli", "developer-tools", "utility", "uuid", "base64", "hash", "calculator"],
   "author": "moncface",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/moncface/mon-cli"
