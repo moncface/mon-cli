@@ -9,7 +9,7 @@ Mon CLI is the CLI version of mon-tab. npm package name: `mon-tab`
 ### Project-local (single project distillation)
 
 ```
-mon ld              — Distill project state from git + package.json (no LLM required)
+mon ld              — Distill project state from git + package.json + npm test (no LLM required)
 mon lv              — Display current distillation
 mon lv --reindex    — Build SQLite index from hako/ frontmatter
 mon lv --tag <tag>  — Search hako by tag
@@ -52,6 +52,7 @@ Teaches AI tools how to interpret .lndf files.
 - Node.js runtime
 - Minimal external dependencies
 - No LLM API calls (ld/lv/lc/lp are all local operations)
+- ld runs npm test (30s timeout) if scripts.test exists; test:fail → status:debugging
 - lp.js is a single file with subcommand branching
 - ~/.mon/ is auto-created if absent
 - Project files are plain Markdown

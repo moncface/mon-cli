@@ -25,7 +25,7 @@ mon b64 hello         # aGVsbG8=
 mon sha hello         # 2cf24dba5fb0a30e...
 mon calc 1920/1080    # 1920/1080 = 1.777777778
 mon calc 2 inch to cm # 5.08 cm (math.js)
-mon --version         # 0.5.0
+mon --version         # 0.5.2
 mon ?                 # list all commands
 echo "b64 hello" | mon  # aGVsbG8= (stdin pipe)
 ```
@@ -35,7 +35,7 @@ Type `mon ?` to see all available commands.
 ## .lndf Distillation (CLI only)
 
 ```bash
-mon ld              # generate project snapshot from git + package.json
+mon ld              # generate project snapshot from git + package.json + npm test
 mon lv              # view current .lndf
 mon lv --reindex    # build SQLite index from hako/ frontmatter
 mon lv --tag sql    # search hako by tag
@@ -45,6 +45,15 @@ mon lc              # generate + copy to clipboard
 ```
 
 Generates a minimal project state file (`.lndf/current.lndf`) designed for LLM context injection. See [LNDF](https://github.com/moncface/lndf) for the philosophy.
+
+### Debug Distillation (v0.5.2)
+
+`mon ld` automatically runs `npm test` if `scripts.test` exists in package.json:
+
+- `test:pass` — all tests passing
+- `test:fail` + `error:<stderr tail>` — tests failing, status becomes `debugging`
+- `test:timeout` — tests exceeded 30s, status becomes `debugging`
+- No `scripts.test` → fields omitted (Defaults Are Silence)
 
 ## Cross-Project Source Collection (CLI only)
 
